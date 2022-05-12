@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
+// Class for bullet objects.
 public class BulletScript : MonoBehaviour
 {
 
@@ -23,15 +23,16 @@ public class BulletScript : MonoBehaviour
 	void Update()
 	{
 		Vector3 newPosition = transform.position + transform.forward * speed * Time.deltaTime;
-		newPosition.z = transform.position.z;
+
+		newPosition.z = transform.position.z;// change according ship position
 		transform.position = newPosition;
 
-		Vector3 viewportPosition = mainCamera.WorldToViewportPoint(transform.position);
+		//Vector3 viewportPosition = mainCamera.WorldToViewportPoint(transform.position);
 
-		if (viewportPosition.x > 1 || viewportPosition.x < 0 || viewportPosition.y > 1 || viewportPosition.y < 0)
-		{
-			PoolManager.Instance.Recycle(Constants.BULLET_PREFAB_NAME, gameObject);
-		}
+		//if (viewportPosition.x > 1 || viewportPosition.x < 0 || viewportPosition.y > 1 || viewportPosition.y < 0)
+		//{
+		//PoolManager.Instance.Recycle(Constants.BULLET_PREFAB_NAME, gameObject);
+		//}
 	}
 	#endregion
 
@@ -48,6 +49,4 @@ public class BulletScript : MonoBehaviour
 		transform.LookAt(target, Vector3.back);
 	}
 	#endregion
-
-
 }

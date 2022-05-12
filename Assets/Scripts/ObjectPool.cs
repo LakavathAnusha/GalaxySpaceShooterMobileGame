@@ -1,9 +1,11 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+// A pool of objects that can be reused.
+public class ObjectPool
 {
+
 	#region PRIVATE VARIABLES
 	private Queue<GameObject> pool;
 	private GameObject prefab;
@@ -27,6 +29,8 @@ public class ObjectPool : MonoBehaviour
 			pool.Enqueue(obj);
 		}
 	}
+
+	// Spawn an object from the pool.
 	public GameObject Spawn()
 	{
 		GameObject obj;
@@ -43,6 +47,8 @@ public class ObjectPool : MonoBehaviour
 
 		return obj;
 	}
+
+	// Recycle an object back into the pool.
 	public void Recycle(GameObject obj)
 	{
 		obj.SetActive(false);

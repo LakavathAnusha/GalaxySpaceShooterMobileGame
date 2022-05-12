@@ -9,11 +9,10 @@ public class AsteroidScript : MonoBehaviour
 	private bool isLarge;
 
 	private Vector2 force;
-	Rigidbody2D rigidbody2D;
-	PolygonCollider2D collider2D;
 
 	private SpriteRenderer spriteRenderer;
 	private PolygonCollider2D polyCollider;
+	public Rigidbody2D rigidbody2D;
 
 	private int points = 100;
 	private GameManager gameManager;
@@ -37,12 +36,12 @@ public class AsteroidScript : MonoBehaviour
 	{
 		gameManager = GameManager.Instance;
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-		polyCollider = (PolygonCollider2D)collider2D;
+		polyCollider = (PolygonCollider2D)GetComponent<Collider2D>();
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.layer == Constants.SHIP_LAYER)
+		if (collision.gameObject.layer == Constants.SHIP_LAYER_NUMBER)
 		{
 			collision.gameObject.GetComponent<ShipScript>().OnHit();
 
@@ -51,7 +50,7 @@ public class AsteroidScript : MonoBehaviour
 			else
 				BreakApart();
 		}
-		else if (collision.gameObject.layer == Constants.BULLET_LAYER)
+		else if (collision.gameObject.layer == Constants.BULLET_LAYER_NUMBER)
 		{
 			PoolManager.Instance.Recycle(Constants.BULLET_PREFAB_NAME, collision.transform.parent.gameObject);
 

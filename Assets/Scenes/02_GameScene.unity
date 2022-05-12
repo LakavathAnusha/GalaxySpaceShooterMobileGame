@@ -206,6 +206,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &437631960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5000262003445463612, guid: 9db4bacd1b08cf249900c8bdbc76aa35, type: 3}
+  m_PrefabInstance: {fileID: 5000262004269985085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &446621015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,11 +236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268083091295590168, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 268083091295590168, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 268083091295590168, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
       propertyPath: m_LocalRotation.y
@@ -247,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268083091295590168, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 268083091295590168, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -400,7 +405,7 @@ MonoBehaviour:
   - prefab: {fileID: 268083091295590174, guid: 796badac02b60fd42b2b89b56d7d71d9, type: 3}
     initialCapacity: 20
   - prefab: {fileID: 5795979926753142501, guid: 9979894e94e55b3459e74775fe0559e0, type: 3}
-    initialCapacity: 20
+    initialCapacity: 10
 --- !u!4 &1705569264
 Transform:
   m_ObjectHideFlags: 0
@@ -518,6 +523,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5000262002958042110, guid: 9db4bacd1b08cf249900c8bdbc76aa35, type: 3}
+      propertyPath: launcher
+      value: 
+      objectReference: {fileID: 437631960}
     - target: {fileID: 5000262002958042110, guid: 9db4bacd1b08cf249900c8bdbc76aa35, type: 3}
       propertyPath: movementSpeed
       value: 1

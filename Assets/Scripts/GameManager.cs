@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // Start is called before the first frame update
     #region PRIVATE VARIABLES
     private int maxNumLives = 3;
     private int lives;
+
     private int score;
+
+
+
+    private Camera mainCamera;
     #endregion
-
-    #region SINGLETON
-
+    #region SINGLETON REGION
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -20,6 +24,7 @@ public class GameManager : MonoBehaviour
         {
             if (instance == null)
             {
+
                 instance = GameObject.FindObjectOfType<GameManager>();
                 if (instance == null)
                 {
@@ -27,19 +32,28 @@ public class GameManager : MonoBehaviour
                     instance = container.AddComponent<GameManager>();
                 }
             }
+
             return instance;
         }
     }
     #endregion
-    // Start is called before the first frame update
     #region MONOBEHAVIOUR METHODS
+
+
     void Start()
     {
         lives = maxNumLives;
+        mainCamera = Camera.main;
+
         StartCoroutine(SpawnAsteroids());
     }
-    #endregion
 
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    #endregion
     #region PUBLIC METHODS
     // Lose a life.
     public void LoseLife()
@@ -49,34 +63,30 @@ public class GameManager : MonoBehaviour
         if (lives == 0)
             Restart();
     }
-
     // Gain points.
     public void GainPoints(int points)
     {
         score += points;
     }
 
+    // Restart the game.
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Application.LoadLevel(Application.loadedLevel);
     }
-
     #endregion
-
+    #region PRIVATE METHODS
     // Spawn asteroids every few seconds.
     private IEnumerator SpawnAsteroids()
     {
         while (true)
         {
-            // SpawnAsteroid();
+            //SpawnAsteroid();
 
             yield return new WaitForSeconds(Random.Range(2f, 8f));
         }
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
