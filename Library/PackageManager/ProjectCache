@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637878556844420254
-    m_Hash: 3533921098
+      ticks: 637879416654667742
+    m_Hash: 159153540
   m_LockFileStatus:
     m_FilePath: C:/Users/Anusha.Lakavath/Documents/GalaxySpaceShooterMobileGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637878557027059458
-    m_Hash: 2154246561
+      ticks: 637879416654847000
+    m_Hash: 3231273085
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -800,6 +800,87 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: d208594e5483cdf10d303b6ee17df4d6bf58d3de
+        path: 
+    - packageId: com.unity.device-simulator@3.0.3-preview
+      testable: 0
+      isDirectDependency: 1
+      version: 3.0.3-preview
+      source: 1
+      resolvedPath: C:\Users\Anusha.Lakavath\Documents\GalaxySpaceShooterMobileGame\Library\PackageCache\com.unity.device-simulator@3.0.3-preview
+      assetPath: Packages/com.unity.device-simulator
+      name: com.unity.device-simulator
+      displayName: Device Simulator
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Device Simulator is an alternative to the traditional Unity editor
+        Game window. By simulating Screen and SystemInfo class behavior, Device Simulator
+        aims to give an accurate picture of how an app will look on a device.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        compatible:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - Device
+      - Simulator
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637723169670000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.unity.device-simulator.git
+        revision: 45f5dce42e9c1f891f83d5d31a3d4180027c5d24
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -3678,6 +3759,7 @@ m_PackageAssets:
         - 7.0.0-pre.3
         - 7.0.0-pre.4
         - 7.0.0
+        - 8.0.0-pre.1
         compatible:
         - 4.0.4
         - 4.1.0
