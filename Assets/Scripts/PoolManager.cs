@@ -36,7 +36,7 @@ public class PoolManager : MonoBehaviour
 
 				if (_instance == null)
 				{
-					GameObject container = new GameObject("Pool Manager");
+					GameObject container = new GameObject("PoolManager");
 					_instance = container.AddComponent<PoolManager>();
 				}
 			}
@@ -72,8 +72,11 @@ public class PoolManager : MonoBehaviour
 	{
 		if (!pools.ContainsKey(prefabName))
 			return null;
+		else
+		{
 
-		return pools[prefabName].Spawn();
+			return pools[prefabName].Spawn();
+		}
 	}
 
 	// Recycle an object with the given name.

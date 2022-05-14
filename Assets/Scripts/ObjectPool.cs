@@ -11,8 +11,8 @@ public class ObjectPool
 	private GameObject prefab;
 
 	private Transform parent;
+	//SpriteRenderer sprite;
 	#endregion
-
 	#region PUBLIC METHODS
 	// Create a new object pool.
 	public ObjectPool(GameObject _prefab, int initialCapacity)

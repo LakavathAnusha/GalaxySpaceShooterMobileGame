@@ -19,6 +19,13 @@ public class AsteroidScript : MonoBehaviour
 	#endregion
 
 	#region MONOBEHAVIOUR METHODS
+	void Awake()
+	{
+		gameManager = GameManager.Instance;
+		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+		polyCollider = (PolygonCollider2D)GetComponent<Collider2D>();
+		rigidbody2D = GetComponent<Rigidbody2D>();
+	}
 	void OnEnable()
 	{
 		isLarge = (Random.Range(0, 2) == 0);
@@ -32,14 +39,9 @@ public class AsteroidScript : MonoBehaviour
 		rigidbody2D.velocity = Vector2.zero;
 	}
 
-	void Awake()
-	{
-		gameManager = GameManager.Instance;
-		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-		polyCollider = (PolygonCollider2D)GetComponent<Collider2D>();
-	}
-
-	void OnTriggerEnter2D(Collider2D collision)
+	
+   
+    void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.layer == Constants.SHIP_LAYER_NUMBER)
 		{
@@ -115,9 +117,9 @@ public class AsteroidScript : MonoBehaviour
 		if (isLarge)
 		{
 			GameObject prefab = PrefabManager.Instance.GetLargeAsteroidPrefab();
-			spriteRenderer.sprite = prefab.GetComponent<SpriteRenderer>().sprite;
+			spriteRenderer.sprite = prefab.GetComponentInChildren<SpriteRenderer>().sprite;
 
-			PolygonCollider2D prefabCollider = ((PolygonCollider2D)prefab.GetComponent<Collider2D>());
+			PolygonCollider2D prefabCollider = ((PolygonCollider2D)prefab.GetComponentInChildren<Collider2D>());
 			polyCollider.pathCount = prefabCollider.pathCount;
 
 			for (int i = 0; i < prefabCollider.pathCount; i++)
@@ -126,9 +128,9 @@ public class AsteroidScript : MonoBehaviour
 		else
 		{
 			GameObject prefab = PrefabManager.Instance.GetSmallAsteroidPrefab();
-			spriteRenderer.sprite = prefab.GetComponent<SpriteRenderer>().sprite;
+			spriteRenderer.sprite = prefab.GetComponentInChildren<SpriteRenderer>().sprite;
 
-			PolygonCollider2D prefabCollider = ((PolygonCollider2D)prefab.GetComponent<Collider2D>());
+			PolygonCollider2D prefabCollider = ((PolygonCollider2D)prefab.GetComponentInChildren<Collider2D>());
 			polyCollider.pathCount = prefabCollider.pathCount;
 
 			for (int i = 0; i < prefabCollider.pathCount; i++)
@@ -161,7 +163,7 @@ public class AsteroidScript : MonoBehaviour
 
 		while (S >= 1.0f)
 		{
-			u = 2.0f * Random.value - 1.0f;
+			u = 2.0f * Random.value - 1.0f;// why iam using
 			v = 2.0f * Random.value - 1.0f;
 			S = u * u + v * v;
 		}

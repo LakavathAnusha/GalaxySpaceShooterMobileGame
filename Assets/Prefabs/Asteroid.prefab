@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5795979926753142500}
   - component: {fileID: 5795979926753142298}
+  - component: {fileID: 898233790537882145}
   - component: {fileID: 5795979926753142299}
   m_Layer: 8
   m_Name: Asteroid
@@ -17,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5795979926753142500
 Transform:
   m_ObjectHideFlags: 0
@@ -63,6 +64,19 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &898233790537882145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795979926753142501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321cdc07a9760e94393665cd7168072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 5795979926753142299}
 --- !u!50 &5795979926753142299
 Rigidbody2D:
   serializedVersion: 4

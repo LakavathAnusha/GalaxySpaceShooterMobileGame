@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8636632782501783140}
   - component: {fileID: 8636632782501783141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidSmall8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8636632782817706020}
   - component: {fileID: 8636632782817706021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: asteroid_small_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}

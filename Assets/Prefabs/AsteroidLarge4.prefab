@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301290499824625800}
   - component: {fileID: 4301290499824625803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: asteroid_large_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301290500589443332}
   - component: {fileID: 4301290500589443335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidLarge4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
