@@ -63,13 +63,8 @@ namespace MyMobileGalaxyShooter
         }
         #endregion
         #region MY PUBLIC METHODS
-
         #endregion
         #region MY PRIVATE METHODS
-
         #endregion
-
-
-
     }
 }

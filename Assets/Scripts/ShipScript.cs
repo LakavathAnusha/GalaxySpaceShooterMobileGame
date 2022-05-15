@@ -116,10 +116,8 @@ public class ShipScript : MonoBehaviour
             spriteRenderer.enabled = !spriteRenderer.enabled;
             timer += blinkSpeed;
         }
-
         spriteRenderer.enabled = true;
         GetComponent<Collider2D>().enabled = true;
     }
     #endregion
-
 }
